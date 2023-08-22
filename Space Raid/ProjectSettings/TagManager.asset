@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Player
+  - isGround
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: map
     uniqueID: 3015759563
+    locked: 0
+  - name: Player
+    uniqueID: 441505469
     locked: 0

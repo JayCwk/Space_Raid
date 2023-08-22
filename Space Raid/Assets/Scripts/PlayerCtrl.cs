@@ -6,10 +6,10 @@ public class PlayerCtrl : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BoxCollider2D coll;
-    private SpriteRenderer sprite;
     private Animator anim;
+    private bool FacingRight = true;
 
-    //[SerializeField] private LayerMask jumpableGround;
+    [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
     [SerializeField] private float speed = 7f;
@@ -24,7 +24,6 @@ public class PlayerCtrl : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
-        sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 
@@ -34,7 +33,7 @@ public class PlayerCtrl : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * speed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && OnGround())
         {
             //jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -47,15 +46,21 @@ public class PlayerCtrl : MonoBehaviour
     {
         MoveState state;
 
+        if (dirX > 0f && !FacingRight)
+        {
+            Flip();
+        }
+        else if (dirX < 0f && FacingRight)
+        {
+            Flip();
+        }
         if (dirX > 0f)
         {
             state = MoveState.running;
-            sprite.flipX = false;
         }
         else if (dirX < 0f)
         {
             state = MoveState.running;
-            sprite.flipX = true;
         }
         else
         {
@@ -74,8 +79,16 @@ public class PlayerCtrl : MonoBehaviour
         anim.SetInteger("state", (int)state);
     }
 
-    /*private bool OnGround()
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        FacingRight = !FacingRight;
+
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    private bool OnGround()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
-    }*/
+    }
 }
