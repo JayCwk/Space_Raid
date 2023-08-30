@@ -6,10 +6,8 @@ public class PlayerWeapon : MonoBehaviour
 {
     private Animator anim;
 
-    public Transform firePoint, firePoint1, firePoint2;
+    public Transform firePoint;
     public GameObject bullet;
-
-    public bool setFire = false;
 
     void Start()
     {
@@ -21,11 +19,7 @@ public class PlayerWeapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
-            if (setFire == true)
-            {
-                SplitShoot();
-            }
-            anim.SetBool("shoot", true);
+            //anim.SetBool("shoot", true);
         }
         else
         {
@@ -36,10 +30,5 @@ public class PlayerWeapon : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
-    }
-    void SplitShoot()
-    {
-        Instantiate(bullet, firePoint1.position, firePoint1.rotation);
-        Instantiate(bullet, firePoint2.position, firePoint2.rotation);
     }
 }
