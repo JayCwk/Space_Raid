@@ -19,7 +19,7 @@ public class PlayerWeapon : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
-            //anim.SetBool("shoot", true);
+            anim.SetBool("shoot", true);
         }
         else
         {

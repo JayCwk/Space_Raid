@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerCtrl : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private BoxCollider2D coll;
+    private CapsuleCollider2D coll;
     private Animator anim;
     private bool FacingRight = true;
 
@@ -23,7 +23,7 @@ public class PlayerCtrl : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<BoxCollider2D>();
+        coll = GetComponent<CapsuleCollider2D>();
         anim = GetComponent<Animator>();
     }
 
