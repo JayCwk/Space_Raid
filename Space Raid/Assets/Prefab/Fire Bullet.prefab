@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1925714783585529285}
   - component: {fileID: 7211459343553067092}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Fire Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -411258873, guid: 0c1d4a8f903b6f84094dcd8a6b8f3982, type: 3}
+  m_Sprite: {fileID: -2064512066, guid: cff2d0a27df835f4285a6842d7311e79, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -162,6 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 1
+  damage: 3
   rb: {fileID: 2173907806863237281}
-  impact: {fileID: 1211675419951592648, guid: bd3a251cb4ee8e74f992459fd09a19ce, type: 3}
+  impact: {fileID: 1567862275174554337, guid: 9d5eda2af570ea04baa8db181ddeba5d, type: 3}
