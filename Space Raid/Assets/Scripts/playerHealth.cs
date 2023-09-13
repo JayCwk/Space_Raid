@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class health : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class health : MonoBehaviour
     private SpriteRenderer spriteRend;
 
     [SerializeField] private Behaviour[] components;
+
+   
 
 
     private void Awake()
@@ -48,6 +51,7 @@ public class health : MonoBehaviour
                     component.enabled = false;
 
                 dead = true;
+               
             }
         }
     }
@@ -69,6 +73,8 @@ public class health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(10, 11, false);
     }
+
+    
 
     private void Deactivate()
     {
