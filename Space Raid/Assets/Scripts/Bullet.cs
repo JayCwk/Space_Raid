@@ -9,6 +9,9 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject impact;
 
+    public bool setPierce = false;
+    public int pierce = 1;
+
     void Start()
     {
         rb.velocity = transform.right * speed;
@@ -16,14 +19,30 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
-        if (enemy != null)
+        if (setPierce == true)
         {
-            enemy.takeDamage(damage);
+            EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
+            if (enemy != null)
+            {
+                enemy.takeDamage(damage);
+            }
+
+            if (pierce > 1)
+            {
+                Instantiate(impact, transform.position, transform.rotation);
+                Destroy(gameObject);
+            }
+            pierce++;
         }
-
-        Instantiate(impact, transform.position, transform.rotation);
-
-        Destroy(gameObject);
+        else
+        {
+            EnemyHealth enemy = hitInfo.GetComponent<EnemyHealth>();
+            if (enemy != null)
+            {
+                enemy.takeDamage(damage);
+            }
+            Instantiate(impact, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
     }
 }
