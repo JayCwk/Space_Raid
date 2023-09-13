@@ -1083,6 +1083,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1108,7 +1109,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.12941177, g: 0.12156863, b: 0.1882353, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1157,13 +1158,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.07, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a28db90dc491ef641a3e787b4390eff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.5
+  player: {fileID: 1596519119}
+  aheadDistance: 1
+  cameraSpeed: 0.5
 --- !u!1 &523598523
 GameObject:
   m_ObjectHideFlags: 0
@@ -19225,6 +19242,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 326120327785010396, guid: daf07a0e5b630d247904b9d1f5a544b0, type: 3}
+      propertyPath: jumpForce
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 326120327785010396, guid: daf07a0e5b630d247904b9d1f5a544b0, type: 3}
       propertyPath: jumpableGround.m_Bits
       value: 128
       objectReference: {fileID: 0}
@@ -19292,6 +19313,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4206290349162742135, guid: daf07a0e5b630d247904b9d1f5a544b0, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 767ad15dc1188e543ac61d403940d7ca, type: 2}
     - target: {fileID: 6628666069703025068, guid: daf07a0e5b630d247904b9d1f5a544b0, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -19386,6 +19411,11 @@ MonoBehaviour:
   components:
   - {fileID: 1596519116}
   - {fileID: 1596519115}
+--- !u!4 &1596519119 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3112643221696060556, guid: daf07a0e5b630d247904b9d1f5a544b0, type: 3}
+  m_PrefabInstance: {fileID: 1596519114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1608079425
 GameObject:
   m_ObjectHideFlags: 0
