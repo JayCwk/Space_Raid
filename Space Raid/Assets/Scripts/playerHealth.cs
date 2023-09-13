@@ -16,6 +16,8 @@ public class health : MonoBehaviour
     private SpriteRenderer spriteRend;
 
     [SerializeField] private Behaviour[] components;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip hurtSound;
 
     public bool invincibility = false;
 
@@ -43,6 +45,7 @@ public class health : MonoBehaviour
             if (currentHealth > 0)
             {
                 StartCoroutine(Invunerability());
+                soundManager.instance.PlaySound(hurtSound);
             }
             else
             {
@@ -59,6 +62,7 @@ public class health : MonoBehaviour
                         component.enabled = false;
 
                     dead = true;
+                    soundManager.instance.PlaySound(deathSound);
                 }
             }
         }

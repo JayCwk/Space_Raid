@@ -9,6 +9,7 @@ public class PlayerCtrl : MonoBehaviour
     private Animator anim;
     private bool FacingRight = true;
 
+    [SerializeField] private AudioClip jumpSound;
     [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
@@ -17,7 +18,7 @@ public class PlayerCtrl : MonoBehaviour
 
     private enum MoveState { idle, running, jumping, falling }
 
-    //[SerializeField] private AudioSource jumpSoundEffect;
+   
 
     // Start is called before the first frame update
     private void Start()
@@ -37,6 +38,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             //jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            soundManager.instance.PlaySound(jumpSound);
         }
 
         UpdateAnimation();

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class soundManager : MonoBehaviour
 {
+    public static soundManager instance { get; private set; }
+    private AudioSource source;
     [SerializeField] Slider volumeSlider;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,17 @@ public class soundManager : MonoBehaviour
         {
             load();
         }
+
+        instance = this;
+        source = GetComponent<AudioSource>();
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (instance != null && instance != this)
+            Destroy(gameObject);
     }
 
     public void changeVolume()
@@ -35,5 +48,10 @@ public class soundManager : MonoBehaviour
     private void save()
     {
         PlayerPrefs.SetFloat("musicvolume", volumeSlider.value);
+    }
+    
+    public void PlaySound(AudioClip _sound)
+    {
+        source.PlayOneShot(_sound);
     }
 }

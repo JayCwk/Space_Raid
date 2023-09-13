@@ -10,6 +10,8 @@ public class PlayerWeapon : MonoBehaviour
     private GameObject bullet;
     [SerializeField] private GameObject bullet1;
     [SerializeField] private GameObject bullet2;
+    [SerializeField] private AudioClip bulletSound;
+    [SerializeField] private AudioClip fireSound;
 
     public bool splitFire = false;
     public bool backFire = false;
@@ -62,12 +64,16 @@ public class PlayerWeapon : MonoBehaviour
                 if (backFire == true)
                 {
                     backShoot();
+
                 }
                 nextFire = Time.time + fireCD;
+                soundManager.instance.PlaySound(fireSound);
             }
             else
             {
                 anim.SetBool("shoot", false);
+                soundManager.instance.PlaySound(bulletSound);
+
             }
         }
 

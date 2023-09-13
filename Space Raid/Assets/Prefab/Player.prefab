@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7660834465906935425}
   - component: {fileID: 6881612859517250688}
   - component: {fileID: 308641240852378810}
-  - component: {fileID: 8517060583549435024}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -179,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8087cdaa591fe76418a8b9533b24f441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 8300000, guid: 51db2904895082843894c70895075a88, type: 3}
   jumpableGround:
     serializedVersion: 2
     m_Bits: 128
@@ -223,9 +223,15 @@ MonoBehaviour:
   firePoint3: {fileID: 0}
   bullet1: {fileID: 7320237917659138933, guid: 2c8f473a550dddc4e8c9a1e4cc9a2d2c, type: 3}
   bullet2: {fileID: 7320237917659138933, guid: 1431639617d44184e88326008ae17d3b, type: 3}
+  bulletSound: {fileID: 8300000, guid: a4f751913604a8d43a59023060cdecde, type: 3}
+  fireSound: {fileID: 8300000, guid: bc1b9e1b939260a459e87376b4c127d7, type: 3}
   splitFire: 0
   backFire: 0
   fireBullet: 0
+  fireCD: 0.5
+  setInc: {fileID: 0}
+  invincibilityCD: 0
+  timer: 0
 --- !u!114 &308641240852378810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,20 +249,12 @@ MonoBehaviour:
   fireBullet: {fileID: 0}
   splitShot: {fileID: 0}
   backFire: {fileID: 0}
+  invincible: {fileID: 0}
+  pierce: {fileID: 0}
   weapon: {fileID: 0}
   player: {fileID: 0}
---- !u!114 &8517060583549435024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3555487990150604590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e0bac19609a20848ab28f1a826d163a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  inc: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!1 &4658563926830670367
 GameObject:
   m_ObjectHideFlags: 0
