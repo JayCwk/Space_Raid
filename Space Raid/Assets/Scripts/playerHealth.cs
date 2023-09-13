@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 
 public class health : MonoBehaviour
 {
@@ -18,8 +17,9 @@ public class health : MonoBehaviour
 
     [SerializeField] private Behaviour[] components;
 
-   
+    public bool invincibility = false;
 
+    public PlayerWeapon resetInc;
 
     private void Awake()
     {
@@ -30,30 +30,40 @@ public class health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
-
-        if (currentHealth > 0)
+        if (invincibility == true)
         {
-            StartCoroutine(Invunerability());
+            invincibility = false;
+            resetInc.gameObject.GetComponent<PlayerWeapon>().invincibilityCD = true;
+            return;
         }
         else
         {
-            if (!dead)
+            currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+
+            if (currentHealth > 0)
             {
-                anim.SetTrigger("die");
+                StartCoroutine(Invunerability());
+            }
+            else
+            {
+                if (!dead)
+                {
+                    anim.SetTrigger("die");
 
-                if (GetComponent<PlayerCtrl>() != null)
-                    GetComponent<PlayerCtrl>().enabled = false;
+                    if (GetComponent<PlayerCtrl>() != null)
+                        GetComponent<PlayerCtrl>().enabled = false;
 
-               
 
-                foreach (Behaviour component in components)
-                    component.enabled = false;
 
-                dead = true;
-               
+                    foreach (Behaviour component in components)
+                        component.enabled = false;
+
+                    dead = true;
+                }
             }
         }
+
+        
     }
     public void AddHealth(float _value)
     {
@@ -73,8 +83,6 @@ public class health : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(10, 11, false);
     }
-
-    
 
     private void Deactivate()
     {

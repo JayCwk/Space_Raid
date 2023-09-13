@@ -15,6 +15,13 @@ public class PlayerWeapon : MonoBehaviour
     public bool backFire = false;
     public bool fireBullet = false;
 
+    public float fireCD = 0.5f;
+    private float nextFire = 0;
+
+    public health setInc;
+    public bool invincibilityCD;
+    public float timer;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -42,22 +49,38 @@ public class PlayerWeapon : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Time.time > nextFire)
         {
-            Shoot();
-            anim.SetBool("shoot", true);
-            if (splitFire == true)
+            if (Input.GetButtonDown("Fire1") || Input.GetButton("Fire1"))
             {
-                SplitShoot();
+                Shoot();
+                anim.SetBool("shoot", true);
+                if (splitFire == true)
+                {
+                    SplitShoot();
+                }
+                if (backFire == true)
+                {
+                    backShoot();
+                }
+                nextFire = Time.time + fireCD;
             }
-            if (backFire == true)
+            else
             {
-                backShoot();
+                anim.SetBool("shoot", false);
             }
         }
-        else
+
+        if (invincibilityCD == true)
         {
-            anim.SetBool("shoot", false);
+            timer += Time.deltaTime;
+
+            if (timer > 10)
+            {
+                setInc.gameObject.GetComponent<health>().invincibility = true;
+                invincibilityCD = false;
+                timer = 0;
+            }
         }
     }
 
