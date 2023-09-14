@@ -29,6 +29,8 @@ public class WaveSpawner : MonoBehaviour
 
     private SpawnState state = SpawnState.Counting;
 
+    public GameObject nextLevel;
+
     private void Start()
     {
         waveCountdown = timeBetweenWaves;
@@ -68,7 +70,8 @@ public class WaveSpawner : MonoBehaviour
 
         if (nextWave + 1 > waves.Length - 1)
         {
-            SceneManager.LoadScene(2);
+            nextLevel.SetActive(true); 
+            return;
         }
         else
         {

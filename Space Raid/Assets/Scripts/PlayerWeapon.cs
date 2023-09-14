@@ -72,7 +72,6 @@ public class PlayerWeapon : MonoBehaviour
             else
             {
                 anim.SetBool("shoot", false);
-                soundManager.instance.PlaySound(bulletSound);
 
             }
         }

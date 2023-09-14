@@ -15,10 +15,10 @@ public class Explode : MonoBehaviour
         //Instantiate(deathEffect, transform.position, transform.rotation);
         Destroy(enemy);
     }
-    private void OnTriggerEnter2D(Collider2D hitInfo)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        health player = hitInfo.GetComponent<health>();
-        if (player != null)
+        health player = collision.GetComponent<health>();
+        if(player != null)
         {
             player.TakeDamage(damage);
             Die();
