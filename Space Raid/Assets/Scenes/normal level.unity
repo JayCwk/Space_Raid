@@ -8347,6 +8347,7 @@ MonoBehaviour:
   - {fileID: 1502498714}
   deathSound: {fileID: 0}
   hurtSound: {fileID: 0}
+  sceneBuilder: 5
   invincibility: 0
   resetInc: {fileID: 0}
 --- !u!114 &1502498712 stripped

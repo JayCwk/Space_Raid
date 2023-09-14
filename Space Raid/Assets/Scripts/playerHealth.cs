@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class health : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class health : MonoBehaviour
     [SerializeField] private Behaviour[] components;
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hurtSound;
+
+    public int sceneBuilder;
 
     public bool invincibility = false;
 
@@ -64,7 +67,8 @@ public class health : MonoBehaviour
 
                     dead = true;
                     soundManager.instance.PlaySound(deathSound);
-                    SceneManager.LoadScene("Game Over");
+                    print("Switching scene to" + sceneBuilder);
+                    SceneManager.LoadScene(sceneBuilder, LoadSceneMode.Single);
                 }
             }
         }
