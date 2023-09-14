@@ -1909,7 +1909,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1322181181}
   - component: {fileID: 1322181183}
-  - component: {fileID: 1322181182}
+  - component: {fileID: 1322181184}
   m_Layer: 5
   m_Name: volume slider
   m_TagString: Untagged
@@ -1940,19 +1940,6 @@ RectTransform:
   m_AnchoredPosition: {x: -505, y: -190}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1322181182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322181180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4a60c40b42600f4db220df6bec6ab2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeSlider: {fileID: 1322181183}
 --- !u!114 &1322181183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2004,8 +1991,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1322181182}
-        m_TargetAssemblyTypeName: soundManager, Assembly-CSharp
+      - m_Target: {fileID: 1322181184}
+        m_TargetAssemblyTypeName: bgManager, Assembly-CSharp
         m_MethodName: changeVolume
         m_Mode: 1
         m_Arguments:
@@ -2016,6 +2003,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1322181184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322181180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d7dad8bb5959446bc8b44103285c53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 1322181183}
 --- !u!1 &1405530502
 GameObject:
   m_ObjectHideFlags: 0
