@@ -17,6 +17,12 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
+    public float GetHealth()
+    {
+        return health;
+    }
+
+
     void Die()
     {
         Destroy(gameObject);
@@ -30,4 +36,5 @@ public class EnemyHealth : MonoBehaviour
             player.TakeDamage(damage);
         }
     }
+
 }
