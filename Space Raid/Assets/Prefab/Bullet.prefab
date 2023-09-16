@@ -165,3 +165,5 @@ MonoBehaviour:
   damage: 1
   rb: {fileID: 2173907806863237281}
   impact: {fileID: 1211675419951592648, guid: bd3a251cb4ee8e74f992459fd09a19ce, type: 3}
+  setPierce: 0
+  pierce: 1

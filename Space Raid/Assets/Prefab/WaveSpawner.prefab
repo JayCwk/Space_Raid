@@ -49,7 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Wave 1
-    enemy: {fileID: 1017982284776301208, guid: 9c4fe56dfc288c848a1ab5b42393d582, type: 3}
+    enemy: {fileID: 927610445689780807, guid: e24af2ee1f0a1bb42a79f2517f4c968c, type: 3}
     count: 2
     rate: 2
   spawnPoints:
@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 467279475126698415}
   timeBetweenWaves: 5
   waveCountdown: 0
+  nextLevel: {fileID: 0}
 --- !u!1 &2153075489181479294
 GameObject:
   m_ObjectHideFlags: 0

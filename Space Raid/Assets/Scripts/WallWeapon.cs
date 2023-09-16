@@ -7,13 +7,14 @@ public class WallWeapon : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
 
-    public float timer;
+    private float timer;
+    public float shotCD = 3f;
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer > 2)
+        if (timer > shotCD)
         {
             timer = 0;
             shoot();
