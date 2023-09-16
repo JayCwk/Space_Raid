@@ -6,8 +6,8 @@ using TMPro;
 
 public class BuffMenu : MonoBehaviour
 {
-    public GameObject buffMenu;
-    public GameObject buff;
+    public GameObject buffMenu, buffMenu1;
+    public GameObject buff, buff1;
     public Button fireBullet;
     public Button splitShot;
     public Button backFire;
@@ -23,6 +23,7 @@ public class BuffMenu : MonoBehaviour
     {
         weapon.gameObject.GetComponent<PlayerWeapon>().fireBullet = true;
         buffMenu.SetActive(false);
+        buffMenu1.SetActive(false);
         Time.timeScale = 1;
         //player.gameObject.GetComponent<PlayerMove>().isPause = false;
     }
@@ -30,6 +31,7 @@ public class BuffMenu : MonoBehaviour
     {
         weapon.gameObject.GetComponent<PlayerWeapon>().splitFire = true;
         buffMenu.SetActive(false);
+        buffMenu1.SetActive(false);
         Time.timeScale = 1;
         //player.gameObject.GetComponent<PlayerMove>().isPause = false;
     }
@@ -37,18 +39,21 @@ public class BuffMenu : MonoBehaviour
     {
         inc.gameObject.GetComponent<health>().invincibility = true;
         buffMenu.SetActive(false);
+        buffMenu1.SetActive(false);
         Time.timeScale = 1;
     }
     public void enablePierce()
     {
         bullet.gameObject.GetComponent<Bullet>().setPierce = true;
         buffMenu.SetActive(false);
+        buffMenu1.SetActive(false);
         Time.timeScale = 1;
     }
     public void enableBackFiret()
     {
         weapon.gameObject.GetComponent<PlayerWeapon>().backFire = true;
         buffMenu.SetActive(false);
+        buffMenu1.SetActive(false);
         Time.timeScale = 1;
         //player.gameObject.GetComponent<PlayerMove>().isPause = false;
     }
@@ -65,8 +70,8 @@ public class BuffMenu : MonoBehaviour
         {
             Time.timeScale = 0;
             //player.gameObject.GetComponent<PlayerMove>().isPause = true;
-            buffMenu.SetActive(true);
-            Destroy(buff);
+            buffMenu1.SetActive(true);
+            Destroy(buff1);
         }
         else if (collision.gameObject.CompareTag("Buff2"))
         {

@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - checkpoint
   - GM
+  - Buff1
   layers:
   - Default
   - TransparentFX
