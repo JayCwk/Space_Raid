@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class checkPoint : MonoBehaviour
 {
+    Animator anim;
     private gameMaster gm;
     private void Start()
     {
@@ -14,6 +15,7 @@ public class checkPoint : MonoBehaviour
         if(other.CompareTag ("Player"))
         {
             gm.lastCheckPoint = transform.position;
+           
         }
     }
 }

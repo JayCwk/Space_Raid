@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class gameMaster : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator anim;
     private static gameMaster instance;
     public Vector2 lastCheckPoint;
 
-    private void Awake()
+    public void Awake()
     {
         if(instance == null)
         {

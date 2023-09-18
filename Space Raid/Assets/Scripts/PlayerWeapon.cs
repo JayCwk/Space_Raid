@@ -67,7 +67,7 @@ public class PlayerWeapon : MonoBehaviour
 
                 }
                 nextFire = Time.time + fireCD;
-                soundManager.instance.PlaySound(fireSound);
+               
             }
             else
             {

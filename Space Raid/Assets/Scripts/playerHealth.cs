@@ -21,7 +21,7 @@ public class health : MonoBehaviour
     [SerializeField] private AudioClip deathSound;
     [SerializeField] private AudioClip hurtSound;
 
-    public int sceneBuilder;
+    public restart GameOver;
 
     public bool invincibility = false;
 
@@ -49,7 +49,7 @@ public class health : MonoBehaviour
             if (currentHealth > 0)
             {
                 StartCoroutine(Invunerability());
-                soundManager.instance.PlaySound(hurtSound);
+               
             }
             else
             {
@@ -66,10 +66,12 @@ public class health : MonoBehaviour
                         component.enabled = false;
 
                     dead = true;
-                    soundManager.instance.PlaySound(deathSound);
-                    print("Switching scene to" + sceneBuilder);
-                    SceneManager.LoadScene(sceneBuilder, LoadSceneMode.Single);
-                }
+
+
+
+
+                    GameOver.GameOver();
+                }        
             }
         }
 
@@ -94,8 +96,5 @@ public class health : MonoBehaviour
         Physics2D.IgnoreLayerCollision(10, 11, false);
     }
 
-    private void Deactivate()
-    {
-        gameObject.SetActive(false);
-    }
+ 
 }

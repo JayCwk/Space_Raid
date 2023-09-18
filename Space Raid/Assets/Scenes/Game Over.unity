@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 496029358}
   - component: {fileID: 496029357}
   - component: {fileID: 496029356}
+  - component: {fileID: 496029359}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -350,6 +351,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &496029359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496029355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9ad62c6a4b2774786e1a25671ebec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverUI: {fileID: 0}
 --- !u!1 &625984279
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,7 +1183,6 @@ GameObject:
   - component: {fileID: 1813121892}
   - component: {fileID: 1813121891}
   - component: {fileID: 1813121890}
-  - component: {fileID: 1813121889}
   m_Layer: 5
   m_Name: restart button
   m_TagString: Untagged
@@ -1198,18 +1211,6 @@ RectTransform:
   m_AnchoredPosition: {x: -5.6419, y: -140}
   m_SizeDelta: {x: 566.4554, y: 115.5594}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1813121889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813121887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c9ad62c6a4b2774786e1a25671ebec4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1813121890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,7 +1255,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1813121889}
+      - m_Target: {fileID: 496029359}
         m_TargetAssemblyTypeName: restart, Assembly-CSharp
         m_MethodName: LoaDGame
         m_Mode: 1
