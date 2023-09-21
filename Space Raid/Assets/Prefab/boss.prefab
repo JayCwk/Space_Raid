@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1505952950692165733}
   - component: {fileID: 1857142500526721524}
   - component: {fileID: -714586057936056209}
-  - component: {fileID: -508230768735176915}
   m_Layer: 11
   m_Name: boss
   m_TagString: Enemy
@@ -47,7 +46,7 @@ Transform:
   - {fileID: 65676801319252329}
   - {fileID: 4215142984413829481}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1577738371568785273
 SpriteRenderer:
@@ -177,7 +176,6 @@ MonoBehaviour:
   bossShootingScript: {fileID: 169349184662804655}
   bulletRainScript: {fileID: 511611917992611776}
   EnemyHealthScript: {fileID: 1857142500526721524}
-  BossMovingScript: {fileID: -508230768735176915}
 --- !u!114 &1857142500526721524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +222,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006605059, y: 0.024575442}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -235,21 +233,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.59048575, y: 0.5674712}
   m_EdgeRadius: 0
---- !u!114 &-508230768735176915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16490501793626082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 633488277a7a40842993a935e90382af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1 &329188184190561609
 GameObject:
   m_ObjectHideFlags: 0
