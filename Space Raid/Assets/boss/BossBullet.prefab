@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 750287406851719209}
   - component: {fileID: 5342028473204213144}
   - component: {fileID: -7046969742409763350}
+  - component: {fileID: -8176440000049910088}
   m_Layer: 0
   m_Name: BossBullet
   m_TagString: Untagged
@@ -148,3 +149,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.07
+--- !u!114 &-8176440000049910088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6740841395597674841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47c2717796b5f78418b077f64e7f63db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossBullet: {fileID: 6740841395597674841}

@@ -7,28 +7,15 @@ public class BulletRain : MonoBehaviour
     public GameObject bossbulletPrefab;
     public List<Transform> bulletPositions;
     private float bulletLifetime = 10.0f;
-    private float bulletSpeed = 10.0f; 
+    private float bulletSpeed = 10.0f;
+    private float timer = 0;
 
     void Start()
     {
-        StartCoroutine(AttackCycle());
+        
     }
 
-    private IEnumerator AttackCycle()
-    {
-        int bulletsShot = 0;
-
-        while (bulletsShot < 10)
-        {
-            ShootBullets();
-            bulletsShot++;
-            yield return new WaitForSeconds(1.0f);
-        }
-
-        yield return new WaitForSeconds(5.0f);
-
-        bulletsShot = 0;
-    }
+   
 
     private void ShootBullets()
     {
@@ -48,16 +35,16 @@ public class BulletRain : MonoBehaviour
         Destroy(bossbullet, bulletLifetime);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 
     void Update()
     {
+        timer += Time.deltaTime;
 
+        if (timer > 1)
+        {
+            timer = 0;
+            ShootBullets();
+        }
     }
 }
