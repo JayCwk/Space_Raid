@@ -20,11 +20,11 @@ public class BossMoving : MonoBehaviour
 
         if (transform.position.x > player.transform.position.x)
         {
-            transform.localScale = new Vector3(9, 8, 1);
+            transform.localScale = new Vector3(7, 6, 1);
         }
         if (transform.position.x < player.transform.position.x)
         {
-            transform.localScale = new Vector3(-9, 8, 1);
+            transform.localScale = new Vector3(-7, 6, 1);
         }
     }
 }
