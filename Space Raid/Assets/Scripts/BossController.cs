@@ -7,7 +7,6 @@ public class BossController : MonoBehaviour
     public BossShooting bossShootingScript;
     public BulletRain bulletRainScript;
     public EnemyHealth EnemyHealthScript;
-    public BossMoving BossMovingScript;
     
 
     void Start()
@@ -36,25 +35,21 @@ public class BossController : MonoBehaviour
             else
             {
                 bossShootingScript.enabled = true;
-                BossMovingScript.enabled = true;
                 bulletRainScript.enabled = false;
 
                 yield return new WaitForSeconds(10.0f);
 
                 bossShootingScript.enabled = false;
-                BossMovingScript.enabled = false;
                 bulletRainScript.enabled = false;
 
                 yield return new WaitForSeconds(5.0f);
 
                 bossShootingScript.enabled = false;
-                BossMovingScript.enabled = false;
                 bulletRainScript.enabled = true;
 
                 yield return new WaitForSeconds(10.0f);
 
                 bossShootingScript.enabled = false;
-                BossMovingScript.enabled = false;
                 bulletRainScript.enabled = false;
 
                 yield return new WaitForSeconds(5.0f);
