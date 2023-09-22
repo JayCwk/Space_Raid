@@ -471,6 +471,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1770569018981990738, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 96d99f95222bbda4bad0836c915be26f, type: 3}
+    - target: {fileID: 1770569018981990738, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770569018981990738, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770569018981990738, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 277078c05a2f3ca42b7e2f806eb2c883, type: 3}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4666896923904726712, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -479,9 +511,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: enableInvincibility
       objectReference: {fileID: 0}
+    - target: {fileID: 6621427936599847945, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 981ad0ad1d3fa21459b91cd339466f13, type: 3}
     - target: {fileID: 6735835824993184815, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
       propertyPath: m_Name
       value: BuffMenu (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735835824993184815, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8124006466294876190, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
       propertyPath: m_text
@@ -10112,7 +10152,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016170502, y: 0}
+  m_Offset: {x: -26.19165, y: -0.35372353}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10123,7 +10163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1320724, y: 1}
+  m_Size: {x: 71.9923, y: 21.869637}
   m_EdgeRadius: 0
 --- !u!4 &1120324739
 Transform:
@@ -28907,6 +28947,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1770569018981990738, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 34d8470b84de8b140a57442358c1cc26, type: 3}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 277078c05a2f3ca42b7e2f806eb2c883, type: 3}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3279168874206183136, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4666896923904726712, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -28915,9 +28975,29 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: enableSplitShot
       objectReference: {fileID: 0}
+    - target: {fileID: 6621427936599847945, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dcb88147153e1934d8fcd79574fd5769, type: 3}
+    - target: {fileID: 6621427936599847945, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.b
+      value: 0.01886791
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621427936599847945, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.g
+      value: 0.01886791
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621427936599847945, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_Color.r
+      value: 0.01886791
+      objectReference: {fileID: 0}
     - target: {fileID: 6735835824993184815, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
       propertyPath: m_Name
       value: BuffMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 6735835824993184815, guid: b6f234f202dfa954686a4e33153b9419, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
