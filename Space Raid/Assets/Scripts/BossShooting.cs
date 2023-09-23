@@ -9,9 +9,7 @@ public class BossShooting : MonoBehaviour
     public float bulletLifetime = 10.0f;
     public float bulletSpeed;
     private float timer;
-    private bool isChasing = false;
     public float chaseSpeed;
-    private Transform player;
 
     // Start is called before the first frame update
     void Start()
@@ -30,20 +28,9 @@ public class BossShooting : MonoBehaviour
             ShootInAllDirections();
         }
 
-        if (isChasing)
-        {
-            ChasePlayer();
-        }
     }
 
-    void ChasePlayer()
-    {
-        if (player != null)
-        {
-            Vector2 direction = (player.position - transform.position).normalized;
-            transform.position += (Vector3)direction * chaseSpeed * Time.deltaTime;
-        }
-    }
+    
     void ShootInDirection(Vector2 direction)
     {
         GameObject bullet = Instantiate(bossbullet, bulletPos.position, Quaternion.identity);
@@ -71,16 +58,7 @@ public class BossShooting : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+ 
 
-    public void EnableChase(bool enable)
-    {
-        isChasing = enable;
-    }
+   
 }
