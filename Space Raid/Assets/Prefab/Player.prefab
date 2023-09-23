@@ -224,7 +224,10 @@ MonoBehaviour:
   bullet1: {fileID: 7320237917659138933, guid: 2c8f473a550dddc4e8c9a1e4cc9a2d2c, type: 3}
   bullet2: {fileID: 7320237917659138933, guid: 1431639617d44184e88326008ae17d3b, type: 3}
   bulletSound: {fileID: 8300000, guid: a4f751913604a8d43a59023060cdecde, type: 3}
+  backshoot: {fileID: 8300000, guid: 5db484fd6d7c70646b5b1b7ec454beb4, type: 3}
   fireSound: {fileID: 8300000, guid: bc1b9e1b939260a459e87376b4c127d7, type: 3}
+  switchSound: {fileID: 8300000, guid: b658f827e66c6654e8540e13ae7b752a, type: 3}
+  splitSound: {fileID: 8300000, guid: 9661712cfe8986445a328f845b5c6e29, type: 3}
   splitFire: 0
   backFire: 0
   fireBullet: 0
@@ -245,7 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffMenu: {fileID: 0}
+  buffMenu1: {fileID: 0}
   buff: {fileID: 0}
+  buff1: {fileID: 0}
   fireBullet: {fileID: 0}
   splitShot: {fileID: 0}
   backFire: {fileID: 0}

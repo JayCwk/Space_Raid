@@ -13,6 +13,8 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private AudioClip bulletSound;
     [SerializeField] private AudioClip backshoot;
     [SerializeField] private AudioClip fireSound;
+    [SerializeField] private AudioClip switchSound;
+    [SerializeField] private AudioClip splitSound;
 
     public bool splitFire = false;
     public bool backFire = false;
@@ -39,16 +41,19 @@ public class PlayerWeapon : MonoBehaviour
 
         if(fireBullet == true)
         {
-            if(Input.GetKeyDown(KeyCode.F))
+           
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                soundmanager.instance.PlaySound(fireSound);
+                soundmanager.instance.PlaySound(switchSound);
                 if (bullet == bullet1)
                 {
                     bullet = bullet2;
+                    soundmanager.instance.PlaySound(fireSound);
                 }
                 else if (bullet == bullet2)
                 {
                     bullet = bullet1;
+                    soundmanager.instance.PlaySound(fireSound);
                 }
             }
         }
@@ -62,11 +67,12 @@ public class PlayerWeapon : MonoBehaviour
                 if (splitFire == true)
                 {
                     SplitShoot();
+                   
                 }
                 if (backFire == true)
                 {
                     backShoot();
-                    soundmanager.instance.PlaySound(backshoot);
+                    
 
                 }
                 nextFire = Time.time + fireCD;
@@ -90,19 +96,24 @@ public class PlayerWeapon : MonoBehaviour
                 timer = 0;
             }
         }
+
+       
     }
 
     void Shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        soundmanager.instance.PlaySound(bulletSound);
     }
     void SplitShoot()
     {
         Instantiate(bullet, firePoint1.position, firePoint1.rotation);
         Instantiate(bullet, firePoint2.position, firePoint2.rotation);
+        soundmanager.instance.PlaySound(splitSound);
     }
     void backShoot()
     {
         Instantiate(bullet, firePoint3.position, firePoint3.rotation);
+        soundmanager.instance.PlaySound(backshoot);
     }
 }
