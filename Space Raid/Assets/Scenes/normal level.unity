@@ -8912,7 +8912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780696223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.22237, y: 11.191462, z: -5.349277}
+  m_LocalPosition: {x: -18.031193, y: 11.193122, z: -5.349277}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10120,6 +10120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneBuilder: 3
+  levelsound: {fileID: 8300000, guid: 806a3d4bde240c04794fe2d3d106d98a, type: 3}
 --- !u!61 &1120324738
 BoxCollider2D:
   m_ObjectHideFlags: 0

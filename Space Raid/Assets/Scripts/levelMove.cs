@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class levelMove : MonoBehaviour
 {
     public int sceneBuilder;
+    [SerializeField] private AudioClip levelsound;
 
     private void OnTriggerEnter2D(Collider2D pther)
     {
@@ -16,6 +17,7 @@ public class levelMove : MonoBehaviour
         {
             print("Switching scene to" + sceneBuilder);
             SceneManager.LoadScene(sceneBuilder, LoadSceneMode.Single);
+            soundmanager.instance.PlaySound(levelsound);
         }
     }
 
