@@ -5,6 +5,7 @@ using UnityEngine;
 public class Zombie : MonoBehaviour
 {
     [SerializeField] private float speed = 1.5f;
+    [SerializeField] private AudioClip zombie;
     private GameObject player;
 
     private bool enemyColl;
@@ -18,6 +19,7 @@ public class Zombie : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        soundmanager.instance.PlaySound(zombie);
     }
 
     void Update()
@@ -25,11 +27,13 @@ public class Zombie : MonoBehaviour
         atEdge = Physics2D.OverlapCircle(edgeCheck.position, edgeCheckRadius, whatIsEdge);
         enemyColl = Physics2D.OverlapCircle(enemyCheck.position, edgeCheckRadius, isEnemy);
 
+        
 
 
         if (atEdge && !enemyColl)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+           
         }
 
         if (transform.position.x > player.transform.position.x)
@@ -40,5 +44,7 @@ public class Zombie : MonoBehaviour
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
+
+
     }
 }

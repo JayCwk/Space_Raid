@@ -11,6 +11,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] private GameObject bullet1;
     [SerializeField] private GameObject bullet2;
     [SerializeField] private AudioClip bulletSound;
+    [SerializeField] private AudioClip backshoot;
     [SerializeField] private AudioClip fireSound;
 
     public bool splitFire = false;
@@ -40,6 +41,7 @@ public class PlayerWeapon : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.F))
             {
+                soundmanager.instance.PlaySound(fireSound);
                 if (bullet == bullet1)
                 {
                     bullet = bullet2;
@@ -64,6 +66,7 @@ public class PlayerWeapon : MonoBehaviour
                 if (backFire == true)
                 {
                     backShoot();
+                    soundmanager.instance.PlaySound(backshoot);
 
                 }
                 nextFire = Time.time + fireCD;

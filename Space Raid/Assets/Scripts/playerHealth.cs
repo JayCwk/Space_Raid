@@ -49,6 +49,7 @@ public class health : MonoBehaviour
             if (currentHealth > 0)
             {
                 StartCoroutine(Invunerability());
+                soundmanager.instance.PlaySound(hurtSound);
                
             }
             else
@@ -66,7 +67,7 @@ public class health : MonoBehaviour
                         component.enabled = false;
 
                     dead = true;
-
+                    soundmanager.instance.PlaySound(deathSound);
 
 
 

@@ -38,7 +38,7 @@ public class PlayerCtrl : MonoBehaviour
         {
             //jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            
+            soundmanager.instance.PlaySound(jumpSound);
         }
 
         UpdateAnimation();

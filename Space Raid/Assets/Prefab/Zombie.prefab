@@ -38,7 +38,7 @@ Transform:
   - {fileID: 924238239720330279}
   - {fileID: 4471798340920810465}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &588588883325422341
 SpriteRenderer:
@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
+  zombie: {fileID: 8300000, guid: 76b56bacd47d9c64d8a20d2d36033732, type: 3}
   enemyCheck: {fileID: 4471798340920810465}
   isEnemy:
     serializedVersion: 2

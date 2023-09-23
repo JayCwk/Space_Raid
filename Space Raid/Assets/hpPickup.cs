@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class hpPickup : MonoBehaviour
 {
+    [SerializeField] private AudioClip collectsound;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -12,6 +13,7 @@ public class hpPickup : MonoBehaviour
             if (player != null)
             {
                 player.AddHealth(1);
+                soundmanager.instance.PlaySound(collectsound);
             }
             Destroy(gameObject);
 
