@@ -220,7 +220,7 @@ MonoBehaviour:
   firePoint: {fileID: 1428338952399161590}
   firePoint1: {fileID: 1559361032524623374}
   firePoint2: {fileID: 6445697329735402740}
-  firePoint3: {fileID: 0}
+  firePoint3: {fileID: 5820812192138891526}
   bullet1: {fileID: 7320237917659138933, guid: 2c8f473a550dddc4e8c9a1e4cc9a2d2c, type: 3}
   bullet2: {fileID: 7320237917659138933, guid: 1431639617d44184e88326008ae17d3b, type: 3}
   bulletSound: {fileID: 8300000, guid: a4f751913604a8d43a59023060cdecde, type: 3}
