@@ -9815,6 +9815,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2378285426261688004, guid: 27ee0ee92b2784c4e8f6778218a7e490, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -657
+      objectReference: {fileID: 0}
     - target: {fileID: 4101420055934473977, guid: 27ee0ee92b2784c4e8f6778218a7e490, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -26120,6 +26124,10 @@ PrefabInstance:
       propertyPath: levelsound
       value: 
       objectReference: {fileID: 8300000, guid: 5309c81f30123f446b063dcccb89a455, type: 3}
+    - target: {fileID: 2066900759164386696, guid: 07ed3259229d93948a8306dcd07366e1, type: 3}
+      propertyPath: sceneBuilder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5571538568217609169, guid: 07ed3259229d93948a8306dcd07366e1, type: 3}
       propertyPath: m_Name
       value: level move
